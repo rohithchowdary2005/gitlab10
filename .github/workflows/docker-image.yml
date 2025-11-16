@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./MOVIE-BACKEND
-          file: ./MOVIE-BACKEND/backend.Dockerfile
+          file: ./MOVIE-BACKEND/backend.Dockerfile.Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/docker-backend-lab10-prac-116:latest
 
@@ -35,6 +35,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./MOVIE-FRONTEND
-          file: ./MOVIE-FRONTEND/frontend.Dockerfile
+          file: ./MOVIE-FRONTEND/frontend.Dockerfile.Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/docker-frontend-lab10-prac-116:latest
